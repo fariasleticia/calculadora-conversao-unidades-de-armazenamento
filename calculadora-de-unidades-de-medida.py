@@ -46,6 +46,16 @@ def gbyteParaMbyte(valorASerConvertido):
     mbytes2Calculado = valorASerConvertido * CONSTANTE_BASE_CONVERSÃO
     return mbytes2Calculado
 
+def gbyteParaTByte(valorASerConvertido):
+    print('Valor convertido de gigabyte para terabyte:')
+    tbytes1Calculado = valorASerConvertido / CONSTANTE_BASE_CONVERSÃO
+    return tbytes1Calculado
+
+def tbyteParaGbyte(valorASerConvertido):
+    print('Valor convertido de terabyte para gigabyte:')
+    gbytes2Calculado = valorASerConvertido * CONSTANTE_BASE_CONVERSÃO
+    return gbytes2Calculado
+
 #prints das conversões acima:
 
 print('Insira o valor a ser convertido (byte para bit):')
@@ -87,3 +97,13 @@ print('Insira o valor a ser convertido (gigabyte para megabyte):')
 entradaDoTecladoValorASerConvertido  = converterStringParaFloat(input())
 valorConvertido8 = gbyteParaMbyte(entradaDoTecladoValorASerConvertido)
 print(valorConvertido8)
+
+print('Insira o valor a ser convertido (gigabyte para terabyte):')
+entradaDoTecladoValorASerConvertido  = converterStringParaFloat(input())
+valorConvertido9 = gbyteParaTByte(entradaDoTecladoValorASerConvertido)
+print(valorConvertido9)
+
+print('Insira o valor a ser convertido (terabyte para gigabyte):')
+entradaDoTecladoValorASerConvertido  = converterStringParaFloat(input())
+valorConvertido10 = tbyteParaGbyte(entradaDoTecladoValorASerConvertido)
+print(valorConvertido10)
