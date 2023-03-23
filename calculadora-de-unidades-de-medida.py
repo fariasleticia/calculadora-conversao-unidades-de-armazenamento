@@ -27,14 +27,24 @@ def kbyteParaByte(valorASerConvertido):
     return bytes2Calculado
 
 def kbyteParaMByte(valorASerConvertido):
-    print('Valor convertido de byte para quilobyte:')
+    print('Valor convertido de quilobyte para megabyte:')
     kbytes2Calculado = valorASerConvertido / CONSTANTE_BASE_CONVERSÃO
     return kbytes2Calculado
 
 def mbyteParaKbyte(valorASerConvertido):
-    print('Valor convertido de quilobyte para byte:')
+    print('Valor convertido de megabyte para quilobyte:')
     mbytes1Calculado = valorASerConvertido * CONSTANTE_BASE_CONVERSÃO
     return mbytes1Calculado
+
+def mbyteParaGByte(valorASerConvertido):
+    print('Valor convertido de megabyte para gigabyte:')
+    gbytes1Calculado = valorASerConvertido / CONSTANTE_BASE_CONVERSÃO
+    return gbytes1Calculado
+
+def gbyteParaMbyte(valorASerConvertido):
+    print('Valor convertido de gigabyte para megabyte:')
+    mbytes2Calculado = valorASerConvertido * CONSTANTE_BASE_CONVERSÃO
+    return mbytes2Calculado
 
 #prints das conversões acima:
 
@@ -67,3 +77,13 @@ print('Insira o valor a ser convertido (megabyte para quilobyte):')
 entradaDoTecladoValorASerConvertido  = converterStringParaFloat(input())
 valorConvertido6 = mbyteParaKbyte(entradaDoTecladoValorASerConvertido)
 print(valorConvertido6)
+
+print('Insira o valor a ser convertido (megabyte para gigabyte):')
+entradaDoTecladoValorASerConvertido  = converterStringParaFloat(input())
+valorConvertido7 = mbyteParaGByte(entradaDoTecladoValorASerConvertido)
+print(valorConvertido7)
+
+print('Insira o valor a ser convertido (gigabyte para megabyte):')
+entradaDoTecladoValorASerConvertido  = converterStringParaFloat(input())
+valorConvertido8 = gbyteParaMbyte(entradaDoTecladoValorASerConvertido)
+print(valorConvertido8)
