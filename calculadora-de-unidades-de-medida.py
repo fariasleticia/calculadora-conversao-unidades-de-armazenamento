@@ -1,11 +1,13 @@
 CONSTANTE_BASE_CONVERSÃO = 1024
 
-def converterStringParaFloat(value):
-    print('Valor convertido de string para float')
-    return float(value)
+#funções de conversão:
+
+def converterStringParaFloat(valor):
+    print('Valor convertido de string para float.')
+    return float(valor)
 
 def bitParaByte(valorASerConvertido):
-    print('Valor convertido de bit para byte')
+    print('Valor convertido de bit para byte:')
     bytesCalculado = valorASerConvertido / 8
     return bytesCalculado
 
@@ -14,8 +16,34 @@ def byteParaBit(valorASerConvertido):
     bitsCalculado = valorASerConvertido * 8
     return bitsCalculado
 
-print('Insira o valor a ser convertido:')
+def byteParaKByte(valorASerConvertido):
+    print('Valor convertido de byte para quilobyte:')
+    Kbytes1Calculado = valorASerConvertido / CONSTANTE_BASE_CONVERSÃO
+    return Kbytes1Calculado
+
+def kbyteParaByte(valorASerConvertido):
+    print('Valor convertido de quilobyte para byte:')
+    bytes2Calculado = valorASerConvertido * CONSTANTE_BASE_CONVERSÃO
+    return bytes2Calculado
+
+#prints das conversões acima:
+
+print('Insira o valor a ser convertido (byte para bit):')
 entradaDoTecladoValorASerConvertido  = converterStringParaFloat(input())
 valorConvertido = byteParaBit(entradaDoTecladoValorASerConvertido)
-
 print(valorConvertido)
+
+print('Insira o valor a ser convertido (bit para byte):')
+entradaDoTecladoValorASerConvertido  = converterStringParaFloat(input())
+valorConvertido2 = bitParaByte(entradaDoTecladoValorASerConvertido)
+print(valorConvertido2)
+
+print('Insira o valor a ser convertido (byte para quilobyte):')
+entradaDoTecladoValorASerConvertido  = converterStringParaFloat(input())
+valorConvertido3 = byteParaKByte(entradaDoTecladoValorASerConvertido)
+print(valorConvertido3)
+
+print('Insira o valor a ser convertido (quilobyte para byte):')
+entradaDoTecladoValorASerConvertido  = converterStringParaFloat(input())
+valorConvertido4 = kbyteParaByte(entradaDoTecladoValorASerConvertido)
+print(valorConvertido4)
